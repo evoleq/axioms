@@ -1,16 +1,17 @@
-package org.evoleq.axioms.processor
+package org.evoleq.axioms.ksp.processor
 
 import com.google.devtools.ksp.processing.SymbolProcessor
 import com.google.devtools.ksp.processing.SymbolProcessorEnvironment
 import com.google.devtools.ksp.processing.SymbolProcessorProvider
-import org.evoleq.axioms.processor.framework.MultiProcessor
-import org.evoleq.axioms.processor.functor.FunctorProcessor
+import org.evoleq.axioms.ksp.processor.framework.MultiProcessor
+import org.evoleq.axioms.ksp.processor.functor.FunctorProcessor
+import org.evoleq.axioms.ksp.processor.monad.MonadProcessor
 
 class AxiomsProcessorProvider : SymbolProcessorProvider {
     override fun create(environment: SymbolProcessorEnvironment): SymbolProcessor {
         return MultiProcessor(listOf(
-            FunctorProcessor(environment.codeGenerator, environment.logger)
-
+            FunctorProcessor(environment.codeGenerator, environment.logger),
+            MonadProcessor(environment.codeGenerator, environment.logger)
         ))
     }
 }

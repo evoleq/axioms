@@ -1,4 +1,4 @@
-package org.evoleq.axioms.processor.framework
+package org.evoleq.axioms.ksp.processor.framework
 
 import com.google.devtools.ksp.processing.SymbolProcessor
 import com.google.devtools.ksp.symbol.KSAnnotated

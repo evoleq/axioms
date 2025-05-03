@@ -1,6 +1,8 @@
-package org.evoleq.axioms.processor.functor
+package org.evoleq.axioms.ksp.processor.functor
 
 import com.google.devtools.ksp.symbol.*
+import org.evoleq.axioms.ksp.processor.framework.isFunctionType
+import org.evoleq.axioms.ksp.processor.framework.isGenericType
 
 
 // Function to check if a function matches the signature 'infix fun <S, T> lift(f: (S) -> T): (F<S>) -> F<T>'
@@ -44,17 +46,6 @@ fun KSFunctionDeclaration.hasSignatureOfLiftFunction(): Boolean {
     return true
 }
 
-// Helper function to check if the type is a function (S) -> T
-private fun isFunctionType(type: KSType): Boolean {
-    val classDeclaration = type.declaration as? KSClassDeclaration ?: return false
-    return classDeclaration.simpleName.asString() == "Function" && type.arguments.size == 1
-}
-
-// Helper function to check if a type is a generic type like F<T>
-private fun isGenericType(type: KSType): Boolean {
-    val classDeclaration = type.declaration as? KSClassDeclaration ?: return false
-    return classDeclaration.typeParameters.isNotEmpty()
-}
 
 
 
