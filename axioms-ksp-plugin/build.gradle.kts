@@ -57,7 +57,7 @@ gradlePlugin {
     plugins {
         create("fpAxiomsPlugin") {
             id = "org.evoleq.axioms-ksp-plugin"
-            implementationClass = "org.evoleq.axioms.plugin.FpAxiomsPlugin" // Your plugin's implementation class
+            implementationClass = "org.evoleq.axioms.ksp.plugin.FpAxiomsPlugin" // Your plugin's implementation class
         }
     }
 }
