@@ -6,7 +6,6 @@ import com.google.devtools.ksp.processing.Resolver
 import com.google.devtools.ksp.processing.SymbolProcessor
 import com.google.devtools.ksp.symbol.KSAnnotated
 import org.evoleq.axioms.ksp.definition.Applicative
-import org.evoleq.axioms.ksp.definition.Functor
 import org.evoleq.axioms.ksp.processor.framework.processDeclarations
 import org.evoleq.axioms.ksp.processor.functor.generateMapFunction
 
