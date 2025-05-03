@@ -18,7 +18,7 @@ class ApplicativeProcessor(
         processDeclarations(
             Applicative::class.qualifiedName!!,
             listOf(
-                {c, g, l -> generateMapFunction(c, g, l) },
+                {c, g, l, i -> generateMapFunction(c, g, l, i) },
                 // TODO generate other functions
             ),
             resolver, codeGenerator, logger

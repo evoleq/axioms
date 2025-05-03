@@ -1,5 +1,12 @@
 package org.evoleq.axioms.ksp.definition
 
+import org.evoleq.axioms.ksp.definition.util.ImplMode
+
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.SOURCE)
-annotation class Functor
+annotation class Functor(
+    val typeParameterIndex: Int = 0,
+    val implMode: ImplMode = ImplMode.STANDARD
+)
+
+

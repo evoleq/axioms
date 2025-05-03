@@ -17,7 +17,7 @@ class LensProcessor(
         processDeclarations(
             Lensify::class.qualifiedName!!,
             listOf(
-                {c, g, l -> generateLensFile(c, g, l) },
+                {c, g, l, i -> generateLensFile(c, g, l) },
             ),
             resolver, codeGenerator, logger
         )

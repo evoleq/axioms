@@ -1,6 +1,4 @@
-package org.evoleq.axioms.ksp.definition
-
-import java.security.cert.CertPathValidatorException.Reason
+package org.evoleq.axioms.ksp.definition.util
 
 @Suppress("FunctionName")
 fun FORBIDDEN(reason: String): Nothing = throw Forbidden.Operation(reason)

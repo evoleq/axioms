@@ -10,7 +10,7 @@ import org.evoleq.axioms.ksp.processor.framework.hasFunction
 import org.evoleq.axioms.ksp.processor.framework.isLiftFunction
 
 
-fun generateMapFunction(classDecl: KSClassDeclaration, codeGenerator: CodeGenerator, logger: KSPLogger) {
+fun generateMapFunction(classDecl: KSClassDeclaration, codeGenerator: CodeGenerator, logger: KSPLogger, typeParameterIndex: Int = 0) {
     val className = classDecl.simpleName.asString()
     val packageName = classDecl.packageName.asString()
     val type = ClassName(packageName, className)
@@ -22,21 +22,41 @@ fun generateMapFunction(classDecl: KSClassDeclaration, codeGenerator: CodeGenera
 
     val liftExists = companion?.hasFunction { it.isLiftFunction() }?: false
 
+    val typeParamNames = classDecl.typeParameters.map { it.name.asString() }
+    val original = typeParamNames[typeParameterIndex]
+    val mapped = "${original}Prime"
+
+// The full list of type parameters in the return type (only the functorial one is changed)
+    val mappedParameters = typeParamNames.mapIndexed { index, name ->
+        if (index == typeParameterIndex) mapped else name
+    }
+
+// Build the function
     val mapFun = FunSpec.builder("map")
-        .receiver(type.parameterizedBy(TypeVariableName("S")))
         .addModifiers(KModifier.INFIX)
-        .addTypeVariable(TypeVariableName("S"))
-        .addTypeVariable(TypeVariableName("T"))
-        .addParameter("f", LambdaTypeName.get(TypeVariableName("S"), returnType = TypeVariableName("T")))
-        .returns(type.parameterizedBy(TypeVariableName("T")))
+        // Add all original type variables
+        .apply {
+            typeParamNames.forEach { addTypeVariable(TypeVariableName(it)) }
+            addTypeVariable(TypeVariableName(mapped)) // Add the new mapped one
+        }
+        // Receiver uses all original type parameters
+        .receiver(type.parameterizedBy(*typeParamNames.map { TypeVariableName(it) }.toTypedArray()))
+        // Add the mapping function f: (Original) -> Mapped
+        .addParameter("f", LambdaTypeName.get(
+            parameters = arrayOf(TypeVariableName(original)),
+            returnType = TypeVariableName(mapped)
+        ))
+        // Return type uses all parameters, with the mapped one swapped in
+        .returns(type.parameterizedBy(*mappedParameters.map { TypeVariableName(it) }.toTypedArray()))
         .addKdoc("Functoriality:\nThe map function of [%L]", className)
 
+
     if (liftExists) {
-        mapFun.addStatement("return (%T lift f)(this)", type.nestedClass("Companion"))
+        mapFun.addStatement("return (%T.lift<${(typeParamNames + mapped).joinToString(", ") { it }}> (f))(this)", type.nestedClass("Companion"))
     } else {
         mapFun.addStatement(
             "return TODO(%S)",
-            "Add the function 'infix fun <S, T> lift(f: (S) -> T): ($className<S>)->$className<T> ' to the companion object of $className"
+            "Add the function 'infix fun <${(typeParamNames + mapped).joinToString(", ") { it }}> lift(f: ($original) -> $mapped): ($className<${typeParamNames.joinToString(", ") { it }}>)->$className<${mappedParameters.joinToString(", ") { it }}> ' to the companion object of $className"
         )
     }
 
