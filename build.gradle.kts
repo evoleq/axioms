@@ -1,15 +1,23 @@
-plugins {
-    kotlin("jvm") version "2.0.21"
-}
 
 group = "org.evoleq"
-version = "1.0-SNAPSHOT"
+version = "0.0.1"
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
+/*
+plugins {
+    kotlin("jvm") apply false //version "2.0.21"
+
+}
+
+
 dependencies {
+
+
+
     testImplementation(kotlin("test"))
 }
 
@@ -19,3 +27,4 @@ tasks.test {
 kotlin {
     jvmToolchain(17)
 }
+*/
