@@ -18,3 +18,5 @@ plugins {
 rootProject.name = "axioms"
 include("axioms-ksp-plugin")
 include("axioms-compiler-plugin")
+include("axioms-ksp-plugin-test")
+include("axioms-compiler-plugin-test")
