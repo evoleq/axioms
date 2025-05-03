@@ -24,6 +24,9 @@ dependencies {
     implementation("com.squareup:kotlinpoet:1.14.2")// for generating code
     implementation("com.squareup:kotlinpoet-ksp:1.14.2")
 
+    // structures
+    api(project(":axioms-structure"))
+
     // test stuff
     testImplementation(kotlin("test"))
     testImplementation("org.jetbrains.kotlin:kotlin-test")

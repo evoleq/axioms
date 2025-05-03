@@ -4,28 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8bc4986-8e83-4f24-a4db-c5ce511b25f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/definition/applicative.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/definition/functor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/definition/lens.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/definition/monad.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/plugin/plugin.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/processor/framework/multi-processor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/processor/functor/checks.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/processor/functor/functor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/processor/monad/monad.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/processor/provider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/resources/META-INF/services/com.google.devtools.ksp.processing.SymbolProcessorProvider" afterDir="false" />
+    <list default="true" id="b8bc4986-8e83-4f24-a4db-c5ce511b25f5" name="Changes" comment="Added ApplicativeProcessor">
+      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin-test/src/main/kotlin/org/evoleq/axioms/ksp/test/applicative/test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin-test/src/main/kotlin/org/evoleq/axioms/ksp/test/lensify/test.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/ksp/definition/forbidden.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axioms-structure/src/main/kotlin/org/evoleq/axioms/structure/function/composition.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axioms-structure/src/main/kotlin/org/evoleq/axioms/structure/lens/diagonal/lens.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axioms-structure/src/main/kotlin/org/evoleq/axioms/structure/lens/f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axioms-structure/src/main/kotlin/org/evoleq/axioms/structure/lens/spectral/lens.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/axioms-structure/src/main/kotlin/org/evoleq/axioms/structure/lens/trafo/transform.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axioms-ksp-plugin-test/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/axioms-ksp-plugin-test/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axioms-ksp-plugin/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/axioms-ksp-plugin/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/ksp/processor/functor/generate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/ksp/processor/functor/generate.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -42,6 +46,12 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$/axioms-ksp-test">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/axioms-ksp-plugin-test">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/axioms-structure">
           <activation />
         </task>
         <projects_view>
@@ -61,6 +71,11 @@
                 <item name="axioms" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-compiler-plugin" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -87,12 +102,70 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="publishing" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-ksp-plugin-test" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-ksp-plugin-test" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-ksp-plugin-test" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-structure" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-structure" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-structure" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-structure" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="axioms" type="f1a62948:ProjectNode" />
+                <item name="axioms-structure" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
+              </path>
             </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,13 +185,23 @@
     "Gradle.axioms [clean].executor": "Run",
     "Gradle.axioms [fatJar].executor": "Run",
     "Gradle.axioms:axioms-ksp-plugin [build].executor": "Run",
+    "Gradle.axioms:axioms-ksp-plugin [clean].executor": "Run",
+    "Gradle.axioms:axioms-ksp-plugin [fatJar].executor": "Run",
     "Gradle.axioms:axioms-ksp-plugin [publishAllPublicationsToMavenLocalRepository].executor": "Run",
+    "Gradle.axioms:axioms-ksp-plugin [publishToMavenLocal].executor": "Run",
+    "Gradle.axioms:axioms-ksp-plugin [publish].executor": "Run",
+    "Gradle.axioms:axioms-ksp-plugin-test [build].executor": "Run",
+    "Gradle.axioms:axioms-ksp-plugin-test [clean].executor": "Run",
     "Gradle.axioms:axioms-ksp-test [build].executor": "Run",
+    "Gradle.axioms:axioms-structure [build].executor": "Run",
+    "Gradle.axioms:axioms-structure [jar].executor": "Run",
+    "Gradle.axioms:axioms-structure [kotlinSourcesJar].executor": "Run",
+    "Gradle.axioms:axioms-structure [publishToMavenLocal].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/data/sync/projects/IdeaProjects/axioms/axioms-ksp-test/src/main/kotlin/org/evoleq/axioms/test",
+    "last_opened_file_path": "/data/sync/projects/IdeaProjects/axioms/axioms-ksp-plugin-test/src/main/kotlin/org/evoleq/axioms/ksp/test/applicative",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.2548828",
     "project.structure.side.proportion": "0.13140604"
@@ -126,19 +209,25 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/axioms-ksp-plugin-test/src/main/kotlin/org/evoleq/axioms/ksp/test/applicative" />
+      <recent name="$PROJECT_DIR$/axioms-compiler-plugin/src/main/kotlin/org/evoleq/axioms/cp" />
+      <recent name="$PROJECT_DIR$/axioms-compiler-plugin/src/main/kotlin/org/evoleq/axioms/cp/def" />
+      <recent name="$PROJECT_DIR$/axioms-compiler-plugin/src/main/resources" />
       <recent name="$PROJECT_DIR$/axioms-ksp-test/src/main/kotlin/org/evoleq/axioms/test" />
-      <recent name="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin" />
-      <recent name="$PROJECT_DIR$/axioms-ksp-plugin/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/axioms-ksp-plugin/src/main/resources/META-INF" />
+      <recent name="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/ksp/processor/framework" />
+      <recent name="$PROJECT_DIR$/axioms-ksp-plugin-test/src/main/kotlin/org/evoleq/axioms/ksp/test/monad" />
+      <recent name="$PROJECT_DIR$/axioms-ksp-plugin-test/src/main/kotlin/org/evoleq/axioms/ksp/test/functor" />
+      <recent name="$PROJECT_DIR$/axioms-ksp-plugin-test/src/main/kotlin/org/evoleq/axioms/" />
+      <recent name="$PROJECT_DIR$/axioms-ksp-plugin/src/main/kotlin/org/evoleq/axioms/ksp/" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.axioms:axioms-ksp-test [build]">
-    <configuration name="axioms [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.axioms:axioms-structure [publishToMavenLocal]">
+    <configuration name="axioms:axioms-ksp-plugin-test [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-ksp-plugin-test" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -157,32 +246,10 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="axioms [fatJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="axioms:axioms-structure [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="fatJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="axioms:axioms-ksp-plugin [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-ksp-plugin" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-structure" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -201,10 +268,10 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="axioms:axioms-ksp-plugin [publishAllPublicationsToMavenLocalRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="axioms:axioms-structure [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-ksp-plugin" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-structure" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -212,7 +279,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishAllPublicationsToMavenLocalRepository" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -223,10 +290,10 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="axioms:axioms-ksp-test [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="axioms:axioms-structure [kotlinSourcesJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-ksp-test" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-structure" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -234,7 +301,29 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="kotlinSourcesJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="axioms:axioms-structure [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/axioms-structure" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishToMavenLocal" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -247,11 +336,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.axioms:axioms-ksp-test [build]" />
-        <item itemvalue="Gradle.axioms:axioms-ksp-plugin [publishAllPublicationsToMavenLocalRepository]" />
-        <item itemvalue="Gradle.axioms:axioms-ksp-plugin [build]" />
-        <item itemvalue="Gradle.axioms [fatJar]" />
-        <item itemvalue="Gradle.axioms [build]" />
+        <item itemvalue="Gradle.axioms:axioms-structure [publishToMavenLocal]" />
+        <item itemvalue="Gradle.axioms:axioms-structure [build]" />
+        <item itemvalue="Gradle.axioms:axioms-structure [jar]" />
+        <item itemvalue="Gradle.axioms:axioms-structure [kotlinSourcesJar]" />
+        <item itemvalue="Gradle.axioms:axioms-ksp-plugin-test [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -264,6 +353,54 @@
       <option name="presentableId" value="Default" />
       <updated>1746256744173</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added code of compiler plugin">
+      <option name="closed" value="true" />
+      <created>1746265992190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746265992190</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added code of compiler plugin">
+      <option name="closed" value="true" />
+      <created>1746265999351</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746265999351</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added libs.versions.toml">
+      <option name="closed" value="true" />
+      <created>1746266018636</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746266018636</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added definitions">
+      <option name="closed" value="true" />
+      <created>1746266053940</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746266053940</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added ApplicativeProcessor">
+      <option name="closed" value="true" />
+      <created>1746266152778</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746266152778</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added code of compiler plugin" />
+    <MESSAGE value="Added libs.versions.toml" />
+    <MESSAGE value="Added definitions" />
+    <MESSAGE value="Added ApplicativeProcessor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ApplicativeProcessor" />
   </component>
 </project>

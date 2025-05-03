@@ -14,6 +14,10 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib"))
 
+
+    // structures
+    api(project(":axioms-structure"))
+
     ksp("org.evoleq:axioms-ksp-plugin:0.0.1")
     implementation("org.evoleq:axioms-ksp-plugin:0.0.1")
     testImplementation(kotlin("test"))

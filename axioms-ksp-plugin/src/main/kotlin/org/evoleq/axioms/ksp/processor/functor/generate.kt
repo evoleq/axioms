@@ -36,7 +36,7 @@ fun generateMapFunction(classDecl: KSClassDeclaration, codeGenerator: CodeGenera
     } else {
         mapFun.addStatement(
             "return TODO(%S)",
-            "Add the function 'infix fun <S, T> lift(f: (S) -> T): ($className<S>)->$className<S> ' to the companion object of $className"
+            "Add the function 'infix fun <S, T> lift(f: (S) -> T): ($className<S>)->$className<T> ' to the companion object of $className"
         )
     }
 

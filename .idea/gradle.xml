@@ -9,8 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/axioms-compiler-plugin" />
+            <option value="$PROJECT_DIR$/axioms-compiler-plugin-test" />
             <option value="$PROJECT_DIR$/axioms-ksp-plugin" />
             <option value="$PROJECT_DIR$/axioms-ksp-plugin-test" />
+            <option value="$PROJECT_DIR$/axioms-structure" />
           </set>
         </option>
       </GradleProjectSettings>
