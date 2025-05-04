@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") //version "1.9.24"
+    kotlin("jvm")
     id("com.google.devtools.ksp") version "1.9.24-1.0.20"
     id("org.evoleq.axioms-ksp-plugin") version "0.0.1"
 }
