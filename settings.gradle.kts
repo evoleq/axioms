@@ -21,3 +21,5 @@ include("axioms-compiler-plugin")
 include("axioms-ksp-plugin-test")
 include("axioms-compiler-plugin-test")
 include("axioms-structure")
+include("axioms-structure:src:main:commonMain")
+findProject(":axioms-structure:src:main:commonMain")?.name = "commonMain"
