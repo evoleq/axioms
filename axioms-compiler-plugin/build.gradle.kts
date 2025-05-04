@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") //version "1.9.0"
+    kotlin("jvm")
     `java-gradle-plugin` // Apply Gradle Plugin to make it a plugin
     `java-library`
     `maven-publish`
